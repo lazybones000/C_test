@@ -25,7 +25,10 @@ int main() {
     char tempName[NAME_LEN];
 
     printf("Enter number of students (max 10): ");
-    scanf("%d", &count);
+    if (scanf("%d", &count) != 1 || count < 1 || count > MAX_STUDENTS) {
+        fprintf(stderr, "Invalid count.\n");
+        return 1;
+    }
 
     for (i = 0; i < count; i++) {
         printf("Enter name: ");
