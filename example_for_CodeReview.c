@@ -21,7 +21,7 @@ float avgScores(const float scores[], int n) {
 
 int main() {
     struct Student students[MAX_STUDENTS];
-    int count, i, j;
+    int count = 0, i = 0, j = 0;
     char tempName[NAME_LEN];
 
     printf("Enter number of students (max 10): ");
