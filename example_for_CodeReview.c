@@ -10,7 +10,7 @@ struct Student {
     float avg;
 };
 
-float avgScores(float scores[], int n) {
+float avgScores(const float scores[], int n) {
     int i;
     float sum = 0;
     for (i = 0; i < n; i++) { 
