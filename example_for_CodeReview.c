@@ -38,7 +38,14 @@ int main() {
 
         printf("Enter 5 scores for %s:\n", students[i].name);
         for (j = 0; j < 5; j++) {
-            scanf("%f", &students[i].scores[j]);
+            if (scanf("%f", &students[i].scores[j]) != 1) {
+                fprintf(stderr, "Invalid score input.\n");
+                return 1;
+            }
+            if (students[i].scores[j] < 0 || students[i].scores[j] > 100) {
+                fprintf(stderr, "Invalid score range.\n");
+                return 1;
+            }
         }
 
         students[i].avg = avgScores(students[i].scores, 5);
