@@ -10,7 +10,7 @@ struct Student {
     float avg;
 };
 
-float c(float scores[], int n) {
+float avgScores(float scores[], int n) {
     int i;
     float sum = 0;
     for (i = 0; i < n; i++) { 
@@ -37,7 +37,7 @@ int main() {
             scanf("%f", &students[i].scores[j]);
         }
 
-        students[i].avg = c(students[i].scores, 5);
+        students[i].avg = avgScores(students[i].scores, 5);
     }
 
     printf("\n=== Student Average Scores ===\n");
