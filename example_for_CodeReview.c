@@ -22,7 +22,6 @@ float avgScores(const float scores[], int n) {
 int main() {
     struct Student students[MAX_STUDENTS];
     int count = 0, i = 0, j = 0;
-    char tempName[NAME_LEN];
 
     printf("Enter number of students (max 10): ");
     if (scanf("%d", &count) != 1 || count < 1 || count > MAX_STUDENTS) {
@@ -32,8 +31,10 @@ int main() {
 
     for (i = 0; i < count; i++) {
         printf("Enter name: ");
-        scanf("%s", tempName); 
-        strcpy(students[i].name, tempName);
+        if (scanf("%19s", students[i].name) != 1) {
+            fprintf(stderr, "Invalid name input.\n");
+            return 1;
+        }
 
         printf("Enter 5 scores for %s:\n", students[i].name);
         for (j = 0; j < 5; j++) {
