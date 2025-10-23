@@ -13,7 +13,7 @@ struct Student {
 float c(float scores[], int n) {
     int i;
     float sum = 0;
-    for (i = 0; i <= n; i++) { 
+    for (i = 0; i < n; i++) { 
         sum += scores[i];
     }
     return sum / n;
