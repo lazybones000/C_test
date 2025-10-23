@@ -45,4 +45,5 @@ int main() {
         printf("%s : %.2f\n", students[i].name, students[i].avg);
 
     return 0;
+
 }
