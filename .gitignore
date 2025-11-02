@@ -6,3 +6,7 @@
 /.vs/C_test/v17
 /.vs
 /.github
+
+
+# Unix Executable
+*.out
