@@ -49,4 +49,5 @@ int main(){
     printf("最小值=%f\n",num[0]);
     printf("最大值=%f",num[a-1]);
     return 0;
-}
+}/*做得非常棒，給你個讚讚*/
+
